@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html>
+<head>
+        <meta charset="utf-8" />
+        <title>IntroJS</title>
+        <link rel="stylesheet" href="Content/IntroJS.css" />
+        <script src="Content/IntroJS.head.js"></script>
+        <style>
+            body {
+                padding-left: 15px;
+            }
+        </style>
+</head>
+<body>
+    <h1>My list of unique people</h1>
+    <div id="main" ws-children-template="Main">
+        <ul ws-hole="ListContainer" data-step="1" data-intro="This is the list.">
+            <li ws-template="ListItem">${Name}</li>
+        </ul>
+        <div data-step="2" data-intro="Here add a new element.">
+            <input ws-var="Name" placeholder="Name" data-step="3" data-intro="Type in a new name to add to the list." />
+            <button ws-onclick="Add" data-step="5" data-intro="Click the button to add the element.">Add</button>
+            <div data-step="4" data-intro="Here it shows the input in real time.">You are about to add: ${Name}</div>
+            <button ws-onclick="Intro">Intro</button>
+        </div>
+    </div>
+    <script src="Content/IntroJS.js"></script>
+</body>
+</html>
+
